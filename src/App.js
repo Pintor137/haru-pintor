@@ -1,10 +1,10 @@
-import './App.css';
-import NavBar from './components/NavBar';
+import TemaGlobal from "./components/TemaGlobal";
+
+
 function App() {
   return (
     <div className="App">
-
-      <NavBar/>      
+      <TemaGlobal/>
     </div>
   );
 }
