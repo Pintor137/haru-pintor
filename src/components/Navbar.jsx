@@ -2,18 +2,17 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { IconButton, makeStyles, Button } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { CardWidget } from './CardWidget'
+
 
 const useStyles = makeStyles(theme =>({
     offset:theme.mixins.toolbar,
     title:{
         flexGrow:1
     } 
-    
 }))
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     const classes  = useStyles()
     return (
@@ -33,10 +32,8 @@ const Navbar = (props) => {
                 <Button variant="text" color="inherit" >
                     Más vendidos
                 </Button>
-                <IconButton color="inherit" arial-label="menu">
-                    <ShoppingCartIcon />
-                </IconButton>
-          
+                
+                <CardWidget/>
 
             </Toolbar>
         </AppBar>
