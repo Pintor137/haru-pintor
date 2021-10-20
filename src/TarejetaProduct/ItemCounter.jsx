@@ -67,21 +67,24 @@ return (
 );
 }
 
-const ItemCounter = () => {
+const ItemCounter = (props) => {
     const classes = useStyles()
-    const [count, setCount] = React.useState(1);
+    const [count, setCount] = React.useState(props.initial);
     const [status, setStatus] = React.useState(false);
 
     const plusCount = ()=>{
         if(count == 10){
             return false;
         }
+
         setCount(count + 1);
+        setStatus(false)
     }
 
     const minusCount = ()=>{
 
         if(count == 0){
+            setStatus(true)
             return false;
         }
         setCount(count - 1);
@@ -105,22 +108,9 @@ const ItemCounter = () => {
             <Box className={classes.addCart} >
                 
                 <Button fullWidth={true}  className={classes.addCart} variant="contained"  endIcon={<ShoppingCartIcon />}>
-                    Add to Cart
-                    
+                        Add to Cart
                 </Button>
-
-
-                {
-                status ? (
-                    <Button fullWidth={true} disabled className={classes.addCart} variant="contained"  endIcon={<ShoppingCartIcon />}>
-                     Add to Cart
-                     </Button>
-                ) : (
-                    <Button fullWidth={true}  className={classes.addCart} variant="contained"  endIcon={<ShoppingCartIcon />}>
-                    Add to Cart
-                    </Button>
-                )
-                }
+               
             </Box>
 
 

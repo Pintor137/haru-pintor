@@ -4,7 +4,7 @@ import { Card,CardContent,CardHeader,CardMedia} from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ItemCounter from '../TarejetaProduct/ItemCounter';
 
-export const Product = () => {
+export const Product = (props) => {
     return (
         <>
 
@@ -19,15 +19,14 @@ export const Product = () => {
           
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            {props.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000
-              species, ranging across all continents except Antarctica
+             {props.descrption}
             </Typography>
          
           </CardContent>
-          <ItemCounter/>
+          <ItemCounter stock={props.stock} initial={props.initial} />
 
 
           
