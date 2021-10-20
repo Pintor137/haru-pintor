@@ -19,7 +19,7 @@ export const Product = (props) => {
           
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            {props.title}
+            {props.product}
             </Typography>
             <Typography variant="body2" color="text.secondary">
              {props.descrption}
