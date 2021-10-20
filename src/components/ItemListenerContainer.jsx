@@ -14,8 +14,7 @@ export const ItemListenerContainer = () => {
                             product="Product 1" 
                             descrption="Lizards are a widespread group of squamate reptiles, with over 6,000
                             species, ranging across all continents except Antarctica" 
-                            stock="5" 
-                            initial="1" />
+                            stock="5" />
                 </Grid>
                
             

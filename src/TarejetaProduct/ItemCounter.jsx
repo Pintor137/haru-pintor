@@ -69,7 +69,7 @@ return (
 
 const ItemCounter = (props) => {
     const classes = useStyles()
-    const [count, setCount] = React.useState(props.initial);
+    const [count, setCount] = React.useState(1);
     const [status, setStatus] = React.useState(false);
 
     const plusCount = ()=>{
@@ -83,7 +83,7 @@ const ItemCounter = (props) => {
 
     const minusCount = ()=>{
 
-        if(count == 0){
+        if(count == 1){
             setStatus(true)
             return false;
         }
