@@ -73,7 +73,7 @@ const ItemCounter = (props) => {
     const [status, setStatus] = React.useState(false);
 
     const plusCount = ()=>{
-        if(count == 10){
+        if(count == props.stock){
             return false;
         }
 
@@ -107,6 +107,7 @@ const ItemCounter = (props) => {
 
             <Box className={classes.addCart} >
                 
+
                 <Button fullWidth={true}  className={classes.addCart} variant="contained"  endIcon={<ShoppingCartIcon />}>
                         Add to Cart
                 </Button>

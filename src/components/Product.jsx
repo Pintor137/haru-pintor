@@ -26,7 +26,7 @@ export const Product = (props) => {
             </Typography>
          
           </CardContent>
-          <ItemCounter stock={props.stock} initial={props.initial} />
+          <ItemCounter stock={props.stock} initial={parseInt(props.initial)} />
 
 
           
