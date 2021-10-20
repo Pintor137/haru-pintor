@@ -2,8 +2,6 @@ import {ThemeProvider} from '@material-ui/core/styles'
 import theme from '../temaConfig'
 import Contenedor from './Contenedor';
 
-
-
 function TemaGlobal() {
   return (
 
