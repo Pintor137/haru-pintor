@@ -5,45 +5,55 @@ import { makeStyles, Button } from '@material-ui/core'
 import { CardWidget } from './CardWidget'
 
 
-const useStyles = makeStyles(theme =>({
-    title:{
-        flexGrow:1
+
+import { Link } from "react-router-dom";
+
+const useStyles = makeStyles((theme) => ({
+    navlinks: {
+      marginLeft: theme.spacing(10),
+      display: "flex",
     },
-    appBar:{
-        [theme.breakpoints.up('xl')]:{
-            width: `calc(100% - ${240}px)`,
-        }
-     } 
-}))
+   logo: {
+      flexGrow: "1",
+      cursor: "pointer",
+    },
+    link: {
+      textDecoration: "none",
+      lineHeight:"3rem",
+      color: "white",
+      fontSize: "20px",
+      marginLeft: theme.spacing(8),
+      "&:hover": {
+        color: "yellow"
+      },
+    },
+  }));
 
 const Navbar = () => {
 
     const classes  = useStyles()
     return (
-        <div>
-            <AppBar position="fixed" color="primary" className={classes.appBar} >
-                <Toolbar>
-                
-                    <Typography variant="h6" className={classes.title}>
-                        Haru Pintor
-                    </Typography>
-                    <Button variant="text" color="inherit" >
+        <AppBar position="fixed" color="primary" className={classes.appBar} >
+            <Toolbar>
+                <Typography variant="h4" className={classes.logo}>
+                    Haru Pintor
+                </Typography>
+                <div className={classes.navlinks}>
+                    <Link to="/" className={classes.link}>
                         Home
-                    </Button>
-                    <Button variant="text" color="inherit" >
-                        Categorias
-                    </Button>
-                    <Button variant="text" color="inherit" >
-                        Más vendidos
-                    </Button>
-                    
-                    <CardWidget/>
-
-                </Toolbar>
-            </AppBar>
-          
-        </div>
-    
+                    </Link>
+                    <Link to="/category/1" className={classes.link}>
+                        Category
+                    </Link>
+                    <Link to="/contact" className={classes.link}>
+                        Contact
+                    </Link>
+                    <Link to="/checkout" className={classes.link}>
+                        <CardWidget/>
+                    </Link>
+                </div>
+            </Toolbar>
+        </AppBar>
     )
 }
 

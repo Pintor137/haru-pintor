@@ -1,6 +1,6 @@
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Card,CardContent,CardHeader,CardMedia} from '@material-ui/core';
+import { Card,CardContent,CardHeader,CardMedia,Link} from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ItemCounter from '../TarejetaProduct/ItemCounter';
 
@@ -19,7 +19,11 @@ export const Product = (props) => {
           
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            {props.product}
+
+            <Link href="/detail">
+             {props.product}
+            </Link>
+        
             </Typography>
             <Typography variant="body2" color="text.secondary">
              {props.descrption}
