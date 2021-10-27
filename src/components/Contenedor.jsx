@@ -4,8 +4,9 @@ import { ItemListenerContainer } from "./ItemListenerContainer"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./layouts/About";
 import Contact from "./layouts/Contact";
-import DetailtProduct from "./layouts/DetailtProduct";
+import Item from "./layouts/Item";
 import Category from "./layouts/Category";
+import ProductList from "./product/ProductList";
 
 const styles = makeStyles(theme =>({
     root:{
@@ -47,10 +48,14 @@ const Contenedor = () => {
                 <div className={classes.content}>
                     <div className={classes.toolbar}> </div>
                     <Switch>
-                        <Route exact path="/" component={ItemListenerContainer}/>
-                        <Route path="/detail" component={DetailtProduct}/>
-                        <Route path="/category/:id" component={ItemListenerContainer}/>
-                        <Route path="/item/:id" component={ItemListenerContainer}/>
+                        <Route exact path="/" component={ProductList}/>
+                        <Route path="/item/:itemId" component={Item}/>
+                        <Route path="/category/:categoryId" component={ItemListenerContainer}/>
+                        <Route path="/item" component={Item}/>
+                        <Route path="/cart">
+                    
+                        </Route>
+
                         <Route path="/about" component={About}/>
                         <Route path="/contact" component={Contact}/>
                 

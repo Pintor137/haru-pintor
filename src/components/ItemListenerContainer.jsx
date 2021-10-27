@@ -1,6 +1,6 @@
 
 import {Grid} from '@material-ui/core'
-import { Product } from './Product'
+import { Product } from './product/Product'
 import products from '../data/product'
 
 export const ItemListenerContainer = () => {
