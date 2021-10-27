@@ -42,13 +42,11 @@ const Navbar = () => {
                     <Link to="/" className={classes.link}>
                         Home
                     </Link>
-                    <Link to="/category/1" className={classes.link}>
+                    <Link to="/category" className={classes.link}>
                         Category
                     </Link>
-                    <Link to="/contact" className={classes.link}>
-                        Contact
-                    </Link>
-                    <Link to="/checkout" className={classes.link}>
+                  
+                    <Link to="/cart" className={classes.link}>
                         <CardWidget/>
                     </Link>
                 </div>

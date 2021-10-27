@@ -2,8 +2,6 @@ import Navbar from "./Navbar"
 import {makeStyles} from '@material-ui/core'
 import { ItemListenerContainer } from "./ItemListenerContainer"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import About from "./layouts/About";
-import Contact from "./layouts/Contact";
 import Item from "./layouts/Item";
 import Category from "./layouts/Category";
 import ProductList from "./product/ProductList";
@@ -50,15 +48,14 @@ const Contenedor = () => {
                     <Switch>
                         <Route exact path="/" component={ProductList}/>
                         <Route path="/item/:itemId" component={Item}/>
-                        <Route path="/category/:categoryId" component={ItemListenerContainer}/>
-                        <Route path="/item" component={Item}/>
+                        <Route path="/category">
+                            <h4>Todas las categroias</h4>
+                        </Route>
                         <Route path="/cart">
                     
+                        <h4>Card</h4>
                         </Route>
-
-                        <Route path="/about" component={About}/>
-                        <Route path="/contact" component={Contact}/>
-                
+    
                     </Switch>
                 </div> 
             </Router>
