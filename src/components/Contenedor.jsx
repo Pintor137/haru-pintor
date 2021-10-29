@@ -1,10 +1,10 @@
 import Navbar from "./Navbar"
 import {makeStyles} from '@material-ui/core'
-import { ItemListenerContainer } from "./ItemListenerContainer"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Item from "./layouts/Item";
-import Category from "./layouts/Category";
-import ProductList from "./product/ProductList";
+import ItemDetailContainer from "./details/ItemDetailContainer";
+import ItemListContainer from "./product/ItemListContainer";
+import ItemCategoryDetail from "./layouts/ItemCategoryDetail";
+
 
 const styles = makeStyles(theme =>({
     root:{
@@ -42,15 +42,16 @@ const Contenedor = () => {
        
         <div className={classes.root}>
             <Router>
-            <Navbar/>
+                <Navbar/>
                 <div className={classes.content}>
                     <div className={classes.toolbar}> </div>
                     <Switch>
-                        <Route exact path="/" component={ProductList}/>
-                        <Route path="/item/:itemId" component={Item}/>
-                        <Route path="/category">
+                        <Route exact path="/" component={ItemListContainer}/>
+                        <Route path="/item/:itemId" component={ItemDetailContainer}/>
+                        <Route exact path="/category">
                             <h4>Todas las categroias</h4>
                         </Route>
+                        <Route path="/category/:categoryId" component={ItemCategoryDetail}/>
                         <Route path="/cart">
                     
                         <h4>Card</h4>

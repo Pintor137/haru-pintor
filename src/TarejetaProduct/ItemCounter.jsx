@@ -95,7 +95,7 @@ const ItemCounter = (props) => {
         <div>
             <Box  className={classes.containerBox} >
                
-                <IconButton size="large"className={classes.iconButon}  onClick={ minusCount } >
+                <IconButton size="large" className={classes.iconButon}  onClick={ minusCount } >
                  <RemoveIcon/>  
                 </IconButton>
                     {count}
@@ -115,7 +115,8 @@ const ItemCounter = (props) => {
             </Box>
 
 
-           {/* <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',marginX:1 }}>
+         
+       {/*  <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',marginX:1 }}>
                 <Item >  
                    1
                 </Item>
@@ -123,7 +124,7 @@ const ItemCounter = (props) => {
                 <Item>3</Item>
                 
             </Box>
-
+ 
             <Box sx={{ display: 'flex',marginX:1 }}>
                 <Item >  
                    1
@@ -131,11 +132,10 @@ const ItemCounter = (props) => {
                 <Item>2</Item>
                 <Item>3</Item>
                 
-            </Box>
+            </Box>*/ }
     
     
-         
-    */}
+  
             
             
         </div>
